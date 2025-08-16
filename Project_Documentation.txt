@@ -1,0 +1,82 @@
+# Mangodesk Project Documentation
+
+## Overview
+Mangodesk is a web application that allows users to upload text transcripts, generate AI-powered summaries, and share those summaries via email. The system includes user authentication with email verification to ensure secure and reliable sharing.
+
+---
+
+## Approach & Process
+
+1. **Frontend and Backend Separation**
+   - The project is organized into `frontend` and `backend` folders for clear separation of concerns.
+
+2. **Frontend Implementation**
+   - Built with HTML, CSS, and JavaScript (no frameworks for simplicity).
+   - Features:
+     - User registration and login with email/password.
+     - Email verification prompt after registration.
+     - Transcript upload and custom prompt input.
+     - Editable summary output.
+     - Authenticated summary sharing via email.
+     - Displays the currently logged-in user's email.
+
+3. **Backend Implementation**
+   - Built with Node.js and Express.
+   - Features:
+     - User registration, login, and JWT-based authentication.
+     - Email verification using Gmail and Nodemailer.
+     - Stores users in a local `users.json` file.
+     - Uses the Groq API (via AI SDK) for summary generation.
+     - Secure endpoints for summary generation and email sharing.
+
+4. **Email Sending & Verification**
+   - Uses Gmail App Passwords for secure email sending.
+   - Sends a verification link to the user's email upon registration.
+   - Only verified users can log in and share summaries.
+
+5. **Security**
+   - Passwords are hashed with bcryptjs.
+   - JWT tokens are used for session management.
+   - Sensitive credentials are stored in a `.env` file (not committed to version control).
+
+---
+
+## Tech Stack
+
+- **Frontend:**
+  - HTML, CSS, JavaScript (Vanilla)
+
+- **Backend:**
+  - Node.js
+  - Express.js
+  - Nodemailer (for email)
+  - bcryptjs (for password hashing)
+  - jsonwebtoken (for authentication)
+  - dotenv (for environment variables)
+  - AI SDK + @ai-sdk/groq (for Groq API integration)
+
+- **Other:**
+  - Gmail (App Password for email sending)
+  - Groq API (for AI summarization)
+
+---
+
+## How It Works
+
+1. **User registers** with email and password.
+2. **Verification email** is sent; user must click the link to verify.
+3. **User logs in** after verification.
+4. **User uploads transcript** and enters a prompt (or uses default).
+5. **AI summary is generated** and shown in an editable field.
+6. **User can share** the summary via email to any recipient(s).
+
+---
+
+## Notes
+- The system is designed for easy local development and testing.
+- For production, consider using a database and a production email provider.
+- The Groq API key and Gmail App Password must be kept secure.
+
+---
+
+For any questions or further improvements, please refer to the codebase or contact the developer.
