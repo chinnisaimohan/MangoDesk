@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transcript Summarizer</h1>
+        <div id="auth-section">
+            <h2>Login or Register</h2>
+            <input type="email" id="authEmail" placeholder="Email" />
+            <input type="password" id="authPassword" placeholder="Password" />
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+            <div id="authMessage" class="auth-message"></div>
+        </div>
+        <div id="main-section" style="display:none;">
+            <div id="userEmailDisplay" class="user-email-display"></div>
+            <div class="input-section">
+                <label for="transcriptInput">Upload Transcript (Text):</label>
+                <input type="file" id="transcriptInput" accept=".txt">
+                <label for="customPrompt">Custom Instruction/Prompt:</label>
+                <input type="text" id="customPrompt" placeholder="e.g., Summarize in bullet points for executives" />
+                <button id="generateBtn">Generate Summary</button>
+            </div>
+            <div class="output-section">
+                <label for="summaryOutput">Generated Summary (Editable):</label>
+                <div id="summaryOutput" contenteditable="true" class="editable-output"></div>
+            </div>
+            <div class="share-section">
+                <label for="emailInput">Share via Email:</label>
+                <input type="text" id="emailInput" placeholder="Enter recipient email(s)" />
+                <button id="shareBtn">Share Summary</button>
+            </div>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "email": "chinnisaimohan365@gmail.com",
+    "password": "$2b$10$jW5InjbC/QLp6GC6XAY8fucAS4ddNF7W2m75tYRK3fW8OBEkBiNt6",
+    "verified": true,
+    "verificationToken": null
+  },
+  {
+    "email": "saimohanchinni@gmail.com",
+    "password": "$2b$10$/gwJQJJ4RfQo5mOM.lJML.0hkdjAivWyj2CNIbbSUfK9BNfTaL5FC",
+    "verified": true,
+    "verificationToken": null
+  }
+]
