@@ -1,4 +1,3 @@
-
 // --- Auth logic ---
 const authSection = document.getElementById('auth-section');
 const mainSection = document.getElementById('main-section');
@@ -35,11 +34,13 @@ if (localStorage.getItem('token')) {
     showAuth();
 }
 
+const BACKEND_URL = 'https://mangodesk.onrender.com';
+
 document.getElementById('loginBtn').onclick = async function() {
     const email = document.getElementById('authEmail').value.trim();
     const password = document.getElementById('authPassword').value;
     if (!email || !password) return setAuthMessage('Email and password required.', true);
-    const res = await fetch('http://localhost:3000/login', {
+    const res = await fetch(`${BACKEND_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -58,7 +59,7 @@ document.getElementById('registerBtn').onclick = async function() {
     const email = document.getElementById('authEmail').value.trim();
     const password = document.getElementById('authPassword').value;
     if (!email || !password) return setAuthMessage('Email and password required.', true);
-    const res = await fetch('http://localhost:3000/register', {
+    const res = await fetch(`${BACKEND_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -92,7 +93,7 @@ document.getElementById('generateBtn').addEventListener('click', async function(
     reader.onload = async function(e) {
         const transcriptText = e.target.result;
         // Send to backend for summary generation
-        const response = await fetch('http://localhost:3000/summarize', {
+        const response = await fetch(`${BACKEND_URL}/summarize`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ transcript: transcriptText, prompt: customPrompt })
@@ -123,7 +124,7 @@ document.getElementById('shareBtn').addEventListener('click', async function() {
         alert('You must be logged in to share.');
         return;
     }
-    const response = await fetch('http://localhost:3000/share', {
+    const response = await fetch(`${BACKEND_URL}/share`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
