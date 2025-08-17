@@ -1,3 +1,4 @@
+````markdown name=README.md
 # Mangodesk Setup Instructions
 
 ## Prerequisites
@@ -45,9 +46,6 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
 For more information about Groq API calls and integration, please refer to the official Groq API Quickstart documentation:  
 https://console.groq.com/docs/quickstart
 
-**Citation:**  
-Groq, Inc. (n.d.). Groq API Quickstart. Retrieved from https://console.groq.com/docs/quickstart
-
 ---
 
 ## 4. Frontend Setup
@@ -90,3 +88,12 @@ Groq, Inc. (n.d.). Groq API Quickstart. Retrieved from https://console.groq.co
 ---
 
 For more details, see `Project_Documentation.txt` in the project folder.
+
+---
+
+## Citation
+
+Groq, Inc. (n.d.). Groq API Quickstart. Retrieved from https://console.groq.com/docs/quickstart
+
+MangoDesk Project Documentation. (n.d.). Retrieved from /Project_Documentation.txt
+````
