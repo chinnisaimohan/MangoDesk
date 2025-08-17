@@ -40,20 +40,30 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
 
 ---
 
-## 3. Frontend Setup
+## 3. Groq API
+
+For more information about Groq API calls and integration, please refer to the official Groq API Quickstart documentation:  
+https://console.groq.com/docs/quickstart
+
+**Citation:**  
+Groq, Inc. (n.d.). Groq API Quickstart. Retrieved from https://console.groq.com/docs/quickstart
+
+---
+
+## 4. Frontend Setup
 1. Open the `frontend/index.html` file in your web browser (double-click or right-click > Open with... > your browser).
 2. The app will load in your browser.
 
 ---
 
-## 4. Deployment
+## 5. Deployment
 
 - The backend and frontend are deployed on [Render](https://render.com/).
 - Live site: [https://mangodesk-1.onrender.com](https://mangodesk-1.onrender.com)
 
 ---
 
-## 5. Using the App
+## 6. Using the App
 1. **Register** with your email and password.
 2. **Check your email** for a verification link and click it.
 3. **Log in** with your verified email and password.
