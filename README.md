@@ -35,6 +35,7 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
 4. Start the backend server:
    ```
    npm run
+   node server.js
    ```
    - You should see: `Server running on port 3000`
 
