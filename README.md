@@ -21,6 +21,7 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
 2. Install dependencies:
    ```
    npm install
+   npm install express
    ```
 3. Create a `.env` file in the `backend` folder with the following content:
    ```
@@ -33,7 +34,7 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
    - **Do NOT use your normal Gmail password!**
 4. Start the backend server:
    ```
-   node server.js
+   npm run
    ```
    - You should see: `Server running on port 3000`
 
@@ -45,7 +46,14 @@ Place the project folder (`Mangodesk`) on your desktop or desired location.
 
 ---
 
-## 4. Using the App
+## 4. Deployment
+
+- The backend and frontend are deployed on [Render](https://render.com/).
+- Live site: [https://mangodesk-1.onrender.com](https://mangodesk-1.onrender.com)
+
+---
+
+## 5. Using the App
 1. **Register** with your email and password.
 2. **Check your email** for a verification link and click it.
 3. **Log in** with your verified email and password.
