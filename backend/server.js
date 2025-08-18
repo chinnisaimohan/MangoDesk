@@ -48,7 +48,7 @@ app.post('/register', async (req, res) => {
   users.push({ email, password: hashed, verified: false, verificationToken });
   writeUsers(users);
   // Send verification email
-  const verifyUrl = `http://localhost:3000/verify?token=${verificationToken}`;
+  const verifyUrl = `https://mangodesk.onrender.com/verify?token=${verificationToken}`;
   await transporter.sendMail({
     from: process.env.EMAIL_USER,
     to: email,
